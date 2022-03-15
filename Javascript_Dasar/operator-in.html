@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator In</title>
+</head>
+<body>
+
+    <script>
+        const person = {
+            firstName : "Ma'mun",
+            lastName : "Ramdhan"
+        }
+
+        if ("firstName" in person) {
+            alert(`Hello ${person.firstName}`);
+        } else {
+            alert(`Hello`);
+        }
+
+        const owner = {
+            firstName : "Ma'mun",
+            middleName : "Ramdhan",
+            lastName : undefined,
+        }
+        // const result = "firstName" in person; //true
+        // document.writeln(`<p>${result}</p>`);
+        if ("lastName" in owner) {
+            alert(`Hello ${owner.lastName}`);
+        } else {
+            document.writeln('Hello Owner');
+        }
+
+        const name = [null, "Nama", null];
+        const result = 0 in name;
+
+        document.writeln(result);
+
+
+
+    </script>
+    
+</body>
+</html>
