@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Of</title>
+</head>
+<body>
+    <script>
+        const names = ["Ma'mun", "Ramdhan", "Van der werff"];
+        for (const name of names) {
+            document.writeln(`<p>${name}</p>`);
+        }
+        
+        const nama = "Ma'mun Ramdhan Van der Werff";
+        for (const huruf of nama) {
+            document.writeln(`<p>${huruf}</p>`);
+        }
+
+        // const person = {
+        //     firstName : "Ma'mun",
+        //     middleName : "Ramdhan",
+        //     lastName : "Van der Werff"
+        // }
+
+        // for (const name1 of person) {
+        //     document.writeln(`<p>${name1}</p>`);         <<<===  ini tidak bisa karena Object bukan masuk kedalam itterable
+        // }
+
+        
+    </script>
+</body>
+</html>
