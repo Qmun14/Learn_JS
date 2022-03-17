@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+
+    <script>
+        // const sayHello = (name) => {
+        //     const say = `Hello World ${name} !`;
+        //     alert(say);
+        // }
+        
+        // const sayHello = (name) => alert(`Hello World ${name} !`);
+        const sayHello = name => alert(`Hello World ${name} !`);
+
+        sayHello("Ma'mun");
+
+        // Mendukung return value juga :
+
+        // const num = (first, second) => {
+        //     return first + second;
+        // }
+
+        // bisa langsung kalo satu baris gak perlu nulis return :
+
+        const num = (first, second) => first + second;
+        console.log(num(100, 250));
+
+        function giveMeName(callback) {
+            callback("Ma'mun");
+        }
+
+        // Menggunakan Anonymous Function
+        giveMeName(function (name) {
+            console.log(name);
+        });
+        
+        // Menggunakan Arrow Function sebagai parameter function
+        giveMeName(name => console.log(`Hello ${name} !`));
+
+    </script>
+</body>
+</html>
