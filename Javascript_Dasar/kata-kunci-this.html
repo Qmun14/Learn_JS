@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata Kunci This</title>
+</head>
+<body>
+    
+
+    <script>
+        console.log(this);
+
+        function sample() {
+            console.log(this);
+            function inner() {
+                console.log(this);
+            }
+            inner();
+        }
+        
+        sample();
+
+        const person = {
+            name : "Ma'mun",
+            sayHello : function (value) {
+                console.log(`Hello ${value} nama Saya adalah ${this.name} !`);
+            }
+        }
+        person.sayHello('Budi');
+
+        // This ini selain di luar object adalah mengacu pada parent Scope nya Windows, tetapi kata kunci this di dalam suatu object biasanya mengacu pada object tersebut scope nya,
+
+
+
+    </script>
+</body>
+</html>
