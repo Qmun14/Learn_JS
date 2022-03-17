@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Rest Parameter</title>
+</head>
+<body>
+    
+    <script>
+        function sum(name, ...data) {
+            let total = 0;
+            for (const item of data) {
+                total += item;
+            }
+            document.writeln(`<p>Total ${name} is ${total}</p>`);
+        }
+
+        sum("Orange", 10,1,3,5,4,6,7,8,9,);
+        sum("Manggo", 100,200,500);
+
+        const values = [1,20,30,15,17,13];
+        sum("Banana", values);
+        sum("Banana", ...values); //Spread Syntax apabila sudah terlanjur menggunakan FUNCTION REST sementara kita mau memecah array dari variable lain.
+
+        // sebelum ada fitur FUNCTION REST dulu yang dipake Arguments dalam Function:  -- Tapi ini sekarang sudah tidak disarankan dipakai lagi
+        function oldSum() {
+            let total = 0;
+            for (const argument of arguments) {
+                total += argument;
+                
+            }
+            document.writeln(`Total is ${total}`);
+        }
+        
+        oldSum(1,2,3,4,5);
+
+
+    </script>
+</body>
+</html>
