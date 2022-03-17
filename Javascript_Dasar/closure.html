@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    
+    <script>
+
+        // Closure adalah Mem-Bundle function dan variable yg ada di dalam suatu function ke luar dari scope yang semestinya --agak rumit sedikit ini
+        function createAdder(value) {
+            const owner = "Ma'mun";
+            function add(param) {
+                console.log(owner);
+                return param + value;
+            }
+            return add;
+        }
+
+        const add1 = createAdder(10);
+        
+        console.log(add1(1));
+        
+        const add100 = createAdder(100);
+        console.log(add100(5));
+        console.log(add100(10));
+
+
+    </script>
+</body>
+</html>
