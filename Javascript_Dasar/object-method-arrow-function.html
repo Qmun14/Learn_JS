@@ -13,11 +13,13 @@
             name : "Ma'mun",
             sayHello :  (name) => {
                 console.log(this);
-                console.log(`Hello ${name} ! My Name is ${this.name}`);
+                console.log(`Hello ${name} ! My Name is ${this.name}`); // this.name tidak akan bisa membaca property --> person.name
             }
         }
 
         person.sayHello("Budi");
+
+        // Dalam Arrow function tidak bisa menggunakan kata kunci this dalam object Method karena Scope nya Window/Global parentnya
 
 
     </script>
