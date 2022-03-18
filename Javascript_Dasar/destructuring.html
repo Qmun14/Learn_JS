@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    
+    <script>
+        {
+            const fullNames = ["Ma,mun", "Ramdhan", "Van der Werff", "Daniel", "Lukaz", "Sams", "Hans"];
+            console.log(fullNames[0]);
+            console.log(fullNames[1]);
+            console.log(fullNames[2]);
+
+            const [fisrtName, secondName, thirdName, ...others] = fullNames;
+
+            console.log(fisrtName);
+            console.log(secondName);
+            console.log(thirdName);
+            console.log(others);
+        }
+
+        console.log("--------------");
+
+        {
+            const person = {
+                firstName : "Ma'mun",
+                lastName : "Ramdhan",
+                sex : "Male",
+                address : {
+                    street : "Jl. Belum ada",
+                    city : "Bogor",
+                    region : "Jawa Barat",
+                    state : "Indonesia"
+                },
+                hobbies : "Coding",
+                merrietal : "Single"
+            }
+
+            const {firstName, lastName, sex, address : {street, city, region, state}, ...others} = person;
+
+            console.log(firstName);
+            console.log(lastName);
+            console.log(sex);
+            // console.log(address);
+            console.log(street);
+            console.log(city);
+            console.log(region);
+            console.log(state);
+            console.log(others);
+        }
+
+        console.log("======================================");
+
+        {
+            // Object parameter pada Function
+            function displayPerson({firstName, middleName, lastName}) {
+                console.log(firstName);
+                console.log(middleName);
+                console.log(lastName);
+            }
+
+            const person = {
+                firstName : "Ma'mun",
+                middleName : "Ramdhan",
+                lastName : "Van der Werff"
+            }
+
+            displayPerson(person);
+
+            // Array parameter pada Function
+            function sum([first, second]) {
+                return first + second;
+            }
+
+            console.log(sum([3,5]));
+            console.log(sum([25, 75]));
+        }
+        console.log("=========================================");
+
+        {
+            const person = ["Ma'mun"];
+            const [firtsName, middleName = "Default", lastName = "Vanderwerff"] = person;
+
+            console.log(firtsName);
+            console.log(middleName);
+            console.log(lastName);
+
+            const movies = {
+                title : "Batman",
+                genre : "Scifi",                
+            }
+            console.log(" ");
+            const {title, genre, director = "Default", published_year} = movies;
+
+            console.log(title);
+            console.log(genre);
+            console.log(director);
+        }
+
+        {
+            const movies = {
+                title : "Batman",
+                genre : "Scifi",                
+            }
+            console.log(" ");
+            const {title : judul, 
+                   genre : jenis, 
+                   director : sutradara= "David Austin",
+                   published_year = null} = movies;
+
+            console.log(judul);
+            console.log(jenis);
+            console.log(sutradara);
+            console.log(published_year);
+        }
+
+
+
+    </script>
+</body>
+</html>
