@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Super Constructor</title>
+</head>
+<body>
+    
+    <script>
+        'use strict'
+       class Employee {
+
+            constructor(firstName) {
+                this.firstName = firstName;
+            }
+
+           sayHello (name) {
+               console.log(`Hello ${name}, my Name is Employee ${this.firstName}`);
+           }
+       }
+
+       class Manager extends Employee {
+
+            constructor(firstName, lastName){
+                super(firstName);               // <<<======= Jika kita ingin membuat constructor di child class maka wajib menyertakan constructor dari parent class nya dengan menambahkan kata kunci "super()" parameter nya bebas mau di isi atau tidak optional.
+                this.lastName = lastName;
+            }
+            
+            sayHello (name) {
+                    console.log(`Hello ${name}, my Name is Manager ${this.firstName} ${this.lastName}`);
+            }
+       
+        }
+
+       const budi = new Employee("Budi");
+       budi.sayHello("Joko");
+
+       const mamun = new Manager("Ma'mun", "Ramdhan");
+       mamun.sayHello("Joko");
+
+       console.log(budi);
+       console.log(mamun);
+
+    </script>
+</body>
+</html>
