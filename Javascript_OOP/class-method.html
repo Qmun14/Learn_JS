@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Constructor</title>
+</head>
+<body>
+    
+    <script>
+        class Person {
+            constructor (name) {
+                this.name = name;
+                // this.sayHello = function(name) {
+                //     console.log(`Hello ${name}, Nama Saya ${this.name}!`);  <<=== tidak disalarankan sekarang membuat method di dalam constructor function
+                // }
+            }
+            sayHello(name) {
+                console.log(`Hello ${name}, Nama Saya ${this.name}!`);   // <=== sekarang lebih di sarankan membuat method di prototype class nya 
+            }
+        }
+
+        const mamun = new Person("Ma'mun");
+        console.log(mamun);
+        // console.log(mamun.name);
+        mamun.sayHello("Joko");
+        
+        const budi = new Person("Budi");
+        console.log(budi);
+        // console.log(budi.name);
+        budi.sayHello("Joko");
+    </script>
+</body>
+</html>
