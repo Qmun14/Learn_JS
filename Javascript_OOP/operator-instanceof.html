@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaor InstanceOf</title>
+</head>
+<body>
+
+    <script>
+        class Employee{
+
+        }
+
+        class Manager extends Employee {
+
+        }
+
+        const budi = new Employee();
+        const mamun = new Manager();
+
+        console.log(typeof budi); //tidak bbisa ngecek type pake typeof kalo di Class
+        console.log(typeof mamun); //nanti jadinya malah Object
+
+        console.log(budi instanceof Employee); //true
+        console.log(mamun instanceof Employee); //true ?  <<+++ apabilas suatu class adalah turunan dari class parent maka akan true object instansiasi nya
+
+        console.log(budi instanceof Manager); //false
+        console.log(mamun instanceof Manager); //true
+
+
+    </script>
+    
+</body>
+</html>
