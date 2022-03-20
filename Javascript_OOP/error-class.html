@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Class</title>
+</head>
+<body>
+
+    <script>
+
+        class ValidationError extends Error {
+            constructor(message, field){
+                super(message);
+                this.field = field;
+            }
+        }
+
+
+        class MathUtil{
+
+
+
+            static sum(...numbers){
+
+                if (numbers.length === 0) {
+                    throw new ValidationError (`Total numbers paramter tidak boleh 0 / kosong !`, `numbers`);
+                }
+
+                let total = 0;
+                for (const number of numbers) {
+                    total += number;
+                }
+                return total;
+            }
+
+
+            
+
+        }
+
+        try {
+
+            console.log(MathUtil.sum());
+            console.log("Ma'mun");
+
+        } catch (err) {
+
+                if (err instanceof ValidationError) {
+                    console.log(`Terjadi Error di field ${err.field} dengan error ${err.message}`);
+                } else {
+                    console.log(`Terjadi Error : ${err.message}`);
+                }
+
+        } finally {
+
+            console.log("Program Selesai !");
+
+        }
+
+        class Counter {
+            #counter = 1;
+
+            next() {
+
+                try {
+
+                    return this.#counter;
+
+                } finally {
+
+                    this.#counter++;
+
+                }
+            } 
+        }
+        console.log("Ramdhan");
+        
+    </script>
+    
+</body>
+</html>
