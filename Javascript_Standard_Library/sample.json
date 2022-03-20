@@ -1,0 +1,15 @@
+{
+    "firstName": "Ma'mun",
+    "middleName": "Ramdhan",
+    "lastName": "Van der Werff",
+    "addres": {
+        "street": "No Name",
+        "city": "Bogor"
+    },
+    "hobbies": [
+        "Coding",
+        "Hacking",
+        "Reading",
+        "Gaming"
+    ]
+}
