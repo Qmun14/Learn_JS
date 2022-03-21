@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Object</title>
+</head>
+<body>
+    <script type="module">
+
+        import * as mamun from './scripts/module-object.js';
+
+        console.log(mamun.firstName);
+        console.log(mamun.middleName);
+        console.log(mamun.lastName);
+
+        mamun.hello();
+
+        const person = new mamun.Person("Ma'mun");
+        console.log(person.name);
+        person.sayHello("Ma'mun");
+
+
+    </script>
+</body>
+</html>
