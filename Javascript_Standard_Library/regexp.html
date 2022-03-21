@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp</title>
+</head>
+<body>
+    <script>
+        {
+            // creater RegExp
+            const regex1 = /ma'mun/;
+            const regex2 = new RegExp("ma'mun");
+            const regex3 = new RegExp(/ma'mun/);
+
+        }
+
+        {
+            // test RegExp
+            const name = "ma'mun ramdhan ma'mun van der werff";
+            const regex = /ma'mun/;
+
+            const hasil = regex.exec(name);
+            console.log(hasil);
+            console.log(regex.exec("tidak Ada"));
+            
+            const hasil2 = regex.test(name);
+            console.log(hasil2);
+            console.log(regex.test("tidak Ada"));
+
+        }
+
+        {
+            // regex modifier
+            const name = "ma'mun ramdhan\nMa'mun Ramdhan\nQmun van der werff";
+            const regex1 = /ma'mun/g;
+            const regex2 = /Ramdhan/ig;
+
+            let result;
+            while ((result = regex1.exec(name)) !== null) {
+                console.log(result);
+            }
+
+            while ((result = regex2.exec(name)) !== null) {
+                console.log(result);
+            }
+
+        }
+
+        {
+            // advanced regex
+            const regex1 = /en[aiueo]/ig
+
+            const name = "ena eni enu ene eno edo eny eni";
+            let result;
+            while ((result = regex1.exec(name)) !== null) {
+                console.log(result);
+            }
+
+        }
+
+        {
+            const name = "edo ena eni enu ene eno edo eny eni";
+
+            console.log(name.match(/en[aiueo]/ig));
+            console.log(name.search(/en[aiueo]/ig));
+            console.log(name.replace(/en[aiueo]/i, "Kamu"));
+            console.log(name.replaceAll(/en[aiueo]/ig, "Kamu"));
+            console.log(name.split(/e/ig));
+
+        }
+
+    </script>
+</body>
+</html>
