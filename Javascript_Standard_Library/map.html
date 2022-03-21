@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+        const map = new Map();
+        map.set("firstName" , "Ma'mun Ramdhan");
+        map.set("address" , "Indonesia");
+
+        console.log(map);
+        console.log(map.get("firstName"));
+        console.log(map.get("address"));
+        console.log(map.get("hobby"));
+
+        for (const element of map) {
+            console.log(`${element[0]} : ${element[1]}`);            
+        }
+
+        map.forEach((value, key) => console.log(`${key} : ${value}`)); //  <<====== Lebih rapih pake forEach buat iterasi Object map
+
+    </script>
+</body>
+</html>
