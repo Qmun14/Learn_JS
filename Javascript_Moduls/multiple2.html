@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple 2 for Alias</title>
+</head>
+<body>
+    
+    <script type="module">
+        import {company, sum, Company} from "./scripts/multiple.js";
+        import {company as perusahaan, sum as total, Company as Perusahaan} from "./scripts/multiple.js";
+
+        console.log(company);
+        console.log(perusahaan);
+
+        console.log(sum(25, 35));
+        console.log(total(25, 35));
+
+        const a = new Company("Qapps Tech");
+        const b = new Perusahaan("Qapps Tech");
+
+        a.sayWelcome("Everybody");
+        b.sayWelcome("Semuanya");
+        
+        
+
+    </script>
+</body>
+</html>
