@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encode</title>
+</head>
+<body>
+    <script>
+        {
+            // encode uri dan decode uri
+            const url = "http://contoh.com/?name=Ma'mun Ramdhan van der Werff";
+
+            console.log(url);
+
+            const encoded = encodeURI(url);
+            console.log(encoded);
+
+            const decoded = decodeURI(encoded);
+            console.log(decoded);
+
+
+        }
+
+        {
+            // encode uri dan decode uri
+            const value = "Ma'mun&Ramdhan=van der Werff"
+            const url = "http://contoh.com/?name=";
+
+            console.log(url + value);
+
+            const encoded = encodeURIComponent(value);
+            console.log(url + encoded);
+
+            const decoded = decodeURIComponent(encoded);
+            console.log(url + decoded);
+        }
+    </script>
+</body>
+</html>
