@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodelist</title>
+</head>
+<body>
+    <div>
+        <ul id="menu1">
+            <li id="first">First</li>
+            <li id="second">Second</li>
+            <li id="third">Third</li>
+        </ul>
+
+        <ul id="menu2">
+            <li>Ma'mun</li>
+            <li>Ramdhan</li>
+            <li>Van der Werff</li>
+        </ul>
+    </div>
+
+    <script>
+        const result = document.querySelectorAll("li");
+        console.log(result);
+        
+        const menu1 = document.getElementById('menu1').childNodes;
+        console.log(menu1);
+
+        const menu2 = document.getElementById('menu2').childNodes;
+        console.log(menu2);
+
+
+    </script>
+
+</body>
+</html>
