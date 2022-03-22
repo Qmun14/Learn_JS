@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Property</title>
+</head>
+<body>
+    <div>
+        <ul id="menu">
+            <li id="first">First</li>
+            <li id="second">Second</li>
+            <li id="third">Third</li>
+            <li id="fourth">Fourth</li>
+        </ul>
+    </div>
+
+    <script>
+        const menu = document.getElementById("menu");
+        console.log(menu);
+        console.log(menu.childNodes);
+        
+        const selectMenu = document.getElementById("third");
+        console.log(selectMenu);
+        console.log(selectMenu.textContent);
+        console.log(selectMenu.parentNode);
+        console.log(selectMenu.previousSibling);
+        console.log(selectMenu.nextSibling);
+        console.log(selectMenu.nextElementSibling);
+        console.log(selectMenu.previousElementSibling.textContent);
+
+    </script>
+</body>
+</html>
