@@ -14,6 +14,9 @@
             header.textContent = json.response;
         }
         const ajax = new XMLHttpRequest();
+        ajax.onreadystatechange = function () {  
+            console.log(`Ready state change ${ajax.readyState}`);
+        }
         // ajax.open('GET', "api/hello.json");
         ajax.open('GET', "api/salah.json");
         ajax.addEventListener("load", function () { 
