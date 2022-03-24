@@ -35,12 +35,12 @@
 
         async function getProductNameAsync(){
            try {
-            const product = await getProduct();
-            return product.name;
+                const product = await getProduct();
+                return product.name;
            } catch (err) {
-               return "Product name not found!"
+                return "Product name not found!"
            } finally {
-               return "Silahkan.. next";
+                return "Silahkan.. next";
            }
         }
 
